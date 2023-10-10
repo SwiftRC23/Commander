@@ -16,3 +16,8 @@ requests
 tabulate
 pyqrcode
 keeper-secrets-manager-core>=16.2.0
+
+# WARNING!!!!! Either we need to release to Pypi or make these repos public and change theses to http://
+# If we don't Command will not build and people will be unhappy.
+keeper-dag @ git+ssh://git@github.com/Keeper-Security/keeper-dag.git@main
+discovery-common @ git@github.com:Keeper-Security/discovery-common.git@main

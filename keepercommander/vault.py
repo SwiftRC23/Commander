@@ -321,7 +321,7 @@ class TypedField(object):
             port = value.get('port') or ''
             if host or port:
                 if port:
-                    host += ':' + port
+                    host += ':' + str(port)
             return host
 
     @staticmethod

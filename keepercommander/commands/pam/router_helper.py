@@ -334,6 +334,15 @@ def router_send_message_to_gateway(params, transmission_key, rq_proto, destinati
     return rs
 
 
+def get_response_payload(router_response):
+
+    router_response_response = router_response.get('response')
+    router_response_response_payload_str = router_response_response.get('payload')
+    router_response_response_payload_dict = json.loads(router_response_response_payload_str)
+
+    return router_response_response_payload_dict
+
+
 def print_router_response(router_response, response_type, original_conversation_id=None, is_verbose=False):
     if not router_response:
         return
